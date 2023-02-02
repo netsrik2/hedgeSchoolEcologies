@@ -1,0 +1,116 @@
+/* dev.css */
+@charset "UTF-8";
+
+/* architecture */
+/* .l-: layouts
+.o-: objects
+.c-: components
+.js: JavaScript hooks
+.is-|.has-: state classes
+.t1|.s1: typography sizes
+.u-: utility classes */
+
+/* The very latest clearfix needed: http://cssmojo.com/the-very-latest-clearfix-reloaded/ */
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+/* for supporting browsers, this is the standard way to clear floats in an element */
+/* Some good discussion here: https://rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/ (see comments) */
+.clearfix {
+    display: flow-root;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Work sans", Helvetica, sans-serif;
+    font-size: calc(16px + 1vw);
+    background-color: #eff2ef;
+    color: #344431;
+}
+
+body {
+    line-height: 1.4;
+    /* position: relative; */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1;
+}
+
+.l-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 40vh;
+    font-size: calc(16px + 3.14159vw);
+    border-bottom: .05em solid #a4e051;
+    margin-bottom: .5em;
+}
+
+.l-header h1 {
+    margin: auto;
+}
+
+.l-header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.skip-link {
+    position: fixed;
+    top: -30em;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: var(--purple); /* !****** SET VARS ******************* */
+    color: #eff2ef;
+    padding: .5em 1em;
+    font-size: 1em;
+    text-align: center;
+    transition: top .1s linear;
+}
+
+a.skip-link:focus,
+a.skip-link:focus-visible {
+    top: 0;
+    color: #eff2ef;
+}
+
+.u-wrap {
+    max-width: 36em;
+    padding: 1em;
+    /* set media query */
+    
+    /* padding: .314159vw; */
+    /* padding: 3.33%; */
+    margin: auto;
+}
+
+footer {}
+
+/* Visually hidden accessible content */
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    visibility: hidden;
+    opacity: 0;
+}

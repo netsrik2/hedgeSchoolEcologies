@@ -32,6 +32,13 @@
     position: relative;
 }
 
+/* flexible images and media */
+img,
+object,
+video {
+    max-width: 100%;
+}
+
 
 html {
     -webkit-box-sizing: border-box;
@@ -80,7 +87,8 @@ a.skip-link {
     left: 0;
     right: 0;
     z-index: 20;
-    background: var(--purple); /* !****** SET VARS ******************* */
+    background: var(--purple);
+    /* !****** SET VARS ******************* */
     color: #eff2ef;
     padding: .5em 1em;
     font-size: 1em;
@@ -98,7 +106,7 @@ a.skip-link:focus-visible {
     max-width: 36em;
     padding: 1em;
     /* set media query */
-    
+
     /* padding: .314159vw; */
     /* padding: 3.33%; */
     margin: auto;
